@@ -1,0 +1,8 @@
+prefix=/home/kamran/projectws/install
+
+Name: atomgrip1
+Description: Description of atomgrip1
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

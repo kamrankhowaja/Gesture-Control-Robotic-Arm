@@ -1,0 +1,8 @@
+prefix=/home/kamran/projectws/install
+
+Name: atom_discription
+Description: Description of atom_discription
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

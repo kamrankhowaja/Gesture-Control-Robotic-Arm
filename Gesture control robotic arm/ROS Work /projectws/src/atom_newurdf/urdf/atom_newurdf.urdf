@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="atom_newurdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.4727E-05 1.7347E-18 0.0099736"
+        rpy="0 0 0" />
+      <mass
+        value="4.4396" />
+      <inertia
+        ixx="0.011264"
+        ixy="0"
+        ixz="-3.9899E-07"
+        iyy="0.011256"
+        iyz="-1.5376E-19"
+        izz="0.022225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base2_link">
+    <inertial>
+      <origin
+        xyz="0.0088147 -0.038408 0.045"
+        rpy="0 0 0" />
+      <mass
+        value="3.0365" />
+      <inertia
+        ixx="0.0062539"
+        ixy="-1.7114E-06"
+        ixz="9.4868E-20"
+        iyy="0.010383"
+        iyz="3.9249E-20"
+        izz="0.0054148" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 72 -45"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/base2_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/base2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.037359 0.026585 0.072"
+      rpy="1.5708 0 0.7592" />
+    <parent
+      link="base_link" />
+    <child
+      link="base2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141"
+      upper="3.141"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="shoulder2elbow1_link">
+    <inertial>
+      <origin
+        xyz="-0.06 0 -0.0022"
+        rpy="0 0 0" />
+      <mass
+        value="0.53191" />
+      <inertia
+        ixx="6.1002E-05"
+        ixy="1.3214E-19"
+        ixz="-1.5185E-06"
+        iyy="0.0011553"
+        iyz="-4.0658E-20"
+        izz="0.0011967" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 100 75"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/shoulder2elbow1_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/shoulder2elbow1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder2elbow1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.097098 0.070512 0.0753"
+      rpy="3.1416 0 2.5135" />
+    <parent
+      link="base2_link" />
+    <child
+      link="shoulder2elbow1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141"
+      upper="3.141"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="elbow2twist1_link">
+    <inertial>
+      <origin
+        xyz="0.059349 3.2473E-11 0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="7.6234E-05"
+        ixy="-8.5501E-13"
+        ixz="6.0719E-13"
+        iyy="0.002212"
+        iyz="1.6854E-14"
+        izz="0.0022649" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/elbow2twist1_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/elbow2twist1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elboe2twist1_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.0053"
+      rpy="0 0 -0.98956" />
+    <parent
+      link="shoulder2elbow1_link" />
+    <child
+      link="elbow2twist1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.141"
+      upper="3.141"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="twist_link">
+    <inertial>
+      <origin
+        xyz="9.3271E-09 0.039066 0.037138"
+        rpy="0 0 0" />
+      <mass
+        value="0.54181" />
+      <inertia
+        ixx="0.001388"
+        ixy="2.0288E-10"
+        ixz="-5.7174E-10"
+        iyy="0.00077126"
+        iyz="7.8041E-06"
+        izz="0.0006648" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/twist_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/twist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="twist_joint"
+    type="continuous">
+    <origin
+      xyz="0.12 0 0.075"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="elbow2twist1_link" />
+    <child
+      link="twist_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="shoulder2elbow2.2_link">
+    <inertial>
+      <origin
+        xyz="-0.06 -2.7756E-17 -0.0011476"
+        rpy="0 0 0" />
+      <mass
+        value="0.53191" />
+      <inertia
+        ixx="6.1001E-05"
+        ixy="1.6432E-19"
+        ixz="-4.3093E-20"
+        iyy="0.0011553"
+        iyz="-1.0164E-20"
+        izz="0.0011967" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/shoulder2elbow2.2_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/shoulder2elbow2.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder2elbow2.2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.097098 0.070512 -0.0136"
+      rpy="3.1416 0 2.5135" />
+    <parent
+      link="base2_link" />
+    <child
+      link="shoulder2elbow2.2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141"
+      upper="3.141"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="elbow2twist2.2_link">
+    <inertial>
+      <origin
+        xyz="0.058961 0 0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="7.7799E-05"
+        ixy="-2.2023E-20"
+        ixz="1.2769E-19"
+        iyy="0.0023482"
+        iyz="5.0822E-20"
+        izz="0.0024014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/elbow2twist2.2_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atom_newurdf/meshes/elbow2twist2.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow2twist2.2_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.0236"
+      rpy="0 0 -0.98956" />
+    <parent
+      link="shoulder2elbow2.2_link" />
+    <child
+      link="elbow2twist2.2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.141"
+      upper="3.141"
+      effort="10"
+      velocity="1" />
+  </joint>
+</robot>

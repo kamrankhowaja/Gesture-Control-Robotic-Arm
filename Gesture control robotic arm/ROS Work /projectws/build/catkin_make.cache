@@ -1,0 +1,2 @@
+atom:atom_discription:atom_newurdf:atom_urdf:atomgrip:atomgrip1:atomgrip2
+-DCATKIN_DEVEL_PREFIX=/home/kamran/projectws/devel -DCMAKE_INSTALL_PREFIX=/home/kamran/projectws/install -G Unix Makefiles

@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'base2_joint', 'shoulder2elbow1_joint', 'elboe2twist1_joint', 'twist_joint', 'Gripper1_joint', 'Gripper2.1_joint', 'Gripper2.2_joint', 'Gripper3_joint', 'Gripper4.1_joint', 'Gripper5.1_joint', 'Gripper4.2_joint', 'Gripper5.2_joint', 'elbow2twist2.2_joint', 'shoulder2elbow2.2_joint', ]

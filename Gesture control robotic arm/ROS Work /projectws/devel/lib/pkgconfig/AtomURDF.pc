@@ -1,0 +1,8 @@
+prefix=/home/kamran/projectws/devel
+
+Name: AtomURDF
+Description: Description of AtomURDF
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

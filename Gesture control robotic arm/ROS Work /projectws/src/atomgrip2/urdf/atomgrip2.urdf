@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="atomgrip2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.47274120865545E-05 1.73472347597681E-18 0.00997358604267652"
+        rpy="0 0 0" />
+      <mass
+        value="0.59941" />
+      <inertia
+        ixx="0.00068165"
+        ixy="1.7673E-06"
+        ixz="-1.7455E-08"
+        iyy="9.1178E-05"
+        iyz="1.7154E-06"
+        izz="0.00073294" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base2_link">
+    <inertial>
+      <origin
+        xyz="-8.6736E-19 -1.4674E-05 0.013592"
+        rpy="0 0 0" />
+      <mass
+        value="2.738" />
+      <inertia
+        ixx="0.0055958"
+        ixy="6.904E-05"
+        ixz="4.03E-05"
+        iyy="0.009201"
+        iyz="1.8519E-05"
+        izz="0.0048548" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 20"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/base2_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/base2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.02"
+      rpy="0 0 2.33" />
+    <parent
+      link="base_link" />
+    <child
+      link="base2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="shoulder2elbow1_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.53191" />
+      <inertia
+        ixx="6.1002E-05"
+        ixy="-1.6941E-21"
+        ixz="-1.5185E-06"
+        iyy="0.0011553"
+        iyz="-6.7763E-20"
+        izz="0.0011967" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/shoulder2elbow1_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/shoulder2elbow1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder2elbow1_joint"
+    type="revolute">
+    <origin
+      xyz="59 10 73"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base2_link" />
+    <child
+      link="shoulder2elbow1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="elbow2twist1_link">
+    <inertial>
+      <origin
+        xyz="-0.059349 3.2472E-11 -0.013252"
+        rpy="0 0 0" />
+      <mass
+        value="0.63576" />
+      <inertia
+        ixx="7.6234E-05"
+        ixy="8.2711E-13"
+        ixz="1.7362E-12"
+        iyy="0.002212"
+        iyz="3.7303E-13"
+        izz="0.0022649" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/elbow2twist1_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/elbow2twist1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elboe2twist1_joint"
+    type="revolute">
+    <origin
+      xyz="119 0 -16"
+      rpy="-3.14159265358979 0 3.141" />
+    <parent
+      link="shoulder2elbow1_link" />
+    <child
+      link="elbow2twist1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="twist_link">
+    <inertial>
+      <origin
+        xyz="1.07448372421715E-08 0.0390661320531351 0.0371379342080336"
+        rpy="0 0 0" />
+      <mass
+        value="0.54181" />
+      <inertia
+        ixx="0.001388"
+        ixy="1.9703E-10"
+        ixz="-5.7397E-10"
+        iyy="0.00077126"
+        iyz="7.8041E-06"
+        izz="0.0006648" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/twist_link.STL" />
+      </geometry>
+      <material
+        name="acrylic">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/twist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="twist_joint"
+    type="fixed">
+    <origin
+      xyz="-120 0 -5"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="elbow2twist1_link" />
+    <child
+      link="twist_link" />
+    <axis
+      xyz="-0.517368585384651 -0.855458844697503 -0.0228015763906594" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Gripper1_link">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -2.77555756156289E-17 0.00144453500235753"
+        rpy="0 0 0" />
+      <mass
+        value="0.00030803" />
+      <inertia
+        ixx="1.5786E-08"
+        ixy="5.7644E-24"
+        ixz="-2.4815E-24"
+        iyy="1.7248E-09"
+        iyz="-1.3222E-23"
+        izz="1.6402E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper1_joint"
+    type="revolute">
+    <origin
+      xyz="-2 95 38"
+      rpy="1.5707963267949 1.5701 0" />
+    <parent
+      link="twist_link" />
+    <child
+      link="Gripper1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Gripper2.1_link">
+    <inertial>
+      <origin
+        xyz="0 0.0009025000246346 0.00273409113717271"
+        rpy="0 0 0" />
+      <mass
+        value="0.0008027" />
+      <inertia
+        ixx="2.0453E-08"
+        ixy="2.0059E-23"
+        ixz="1.7371E-23"
+        iyy="4.0135E-08"
+        iyz="5.6989E-09"
+        izz="3.2214E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper2.1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper2.1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper2.1_joint"
+    type="fixed">
+    <origin
+      xyz="0 5 -3"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="Gripper1_link" />
+    <child
+      link="Gripper2.1_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Gripper2.2_link">
+    <inertial>
+      <origin
+        xyz="0 0.000902500024634573 0.00273409113717277"
+        rpy="0 0 0" />
+      <mass
+        value="0.0008027" />
+      <inertia
+        ixx="2.0453E-08"
+        ixy="-3.9291E-24"
+        ixz="-5.7903E-24"
+        iyy="4.0135E-08"
+        iyz="5.6989E-09"
+        izz="3.2214E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper2.2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper2.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper2.2_joint"
+    type="fixed">
+    <origin
+      xyz="0 -5 -3"
+      rpy="-3.14159265358979 0 0" />
+    <parent
+      link="Gripper1_link" />
+    <child
+      link="Gripper2.2_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Gripper3_link">
+    <inertial>
+      <origin
+        xyz="-0.00048983 0.0015 -0.031355"
+        rpy="0 0 0" />
+      <mass
+        value="0.004188" />
+      <inertia
+        ixx="1.3729E-06"
+        ixy="9.6634E-15"
+        ixz="4.0101E-08"
+        iyy="2.0003E-06"
+        iyz="-2.9343E-15"
+        izz="6.3361E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper3_joint"
+    type="fixed">
+    <origin
+      xyz="0 -6.5 1"
+      rpy="3.14159265358979 0 -3.14159265358979" />
+    <parent
+      link="Gripper2.2_link" />
+    <child
+      link="Gripper3_link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Gripper4.1_link">
+    <inertial>
+      <origin
+        xyz="-0.0056632 0.0013462 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019628" />
+      <inertia
+        ixx="6.8163E-08"
+        ixy="2.0959E-08"
+        ixz="-2.7297E-23"
+        iyy="2.7804E-07"
+        iyz="-4.6322E-23"
+        izz="3.4326E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper4.1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper4.1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper4.1_joint"
+    type="revolute">
+    <origin
+      xyz="-12 3 -28"
+      rpy="-1.57079632679489 -1.36586679681116 0" />
+    <parent
+      link="Gripper3_link" />
+    <child
+      link="Gripper4.1_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Gripper5.1_link">
+    <inertial>
+      <origin
+        xyz="-0.03218 -0.012511 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014687" />
+      <inertia
+        ixx="1.2682E-07"
+        ixy="1.9315E-07"
+        ixz="-1.8529E-22"
+        iyy="3.4543E-07"
+        iyz="6.2866E-23"
+        izz="4.7005E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper5.1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper5.1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper5.1_joint"
+    type="fixed">
+    <origin
+      xyz="-31 4 3"
+      rpy="3.142 0 -0.671" />
+    <parent
+      link="Gripper4.1_link" />
+    <child
+      link="Gripper5.1_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Gripper4.2_link">
+    <inertial>
+      <origin
+        xyz="-0.0056632 0.0013462 0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019628" />
+      <inertia
+        ixx="6.8163E-08"
+        ixy="2.0959E-08"
+        ixz="-7.2378E-23"
+        iyy="2.7804E-07"
+        iyz="-1.3235E-23"
+        izz="3.4326E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper4.2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper4.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper4.2_joint"
+    type="revolute">
+    <origin
+      xyz="15 6 -28"
+      rpy="-1.57079632679494 -1.271 -3.14159265358975" />
+    <parent
+      link="Gripper3_link" />
+    <child
+      link="Gripper4.2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Gripper5.2_link">
+    <inertial>
+      <origin
+        xyz="-0.023745 0.0039364 -0.0015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014687" />
+      <inertia
+        ixx="4.0315E-08"
+        ixy="1.0447E-07"
+        ixz="-4.8804E-23"
+        iyy="4.3193E-07"
+        iyz="1.8198E-23"
+        izz="4.7005E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper5.2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/Gripper5.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Gripper5.2_joint"
+    type="fixed">
+    <origin
+      xyz="-31 4 -3"
+      rpy="3.14159265358979 0 -0.7" />
+    <parent
+      link="Gripper4.2_link" />
+    <child
+      link="Gripper5.2_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="elbow2twist2.2_link">
+    <inertial>
+      <origin
+        xyz="-0.038907 -0.01 0.097452"
+        rpy="0 0 0" />
+      <mass
+        value="0.66764" />
+      <inertia
+        ixx="0.00092482"
+        ixy="0.001098"
+        ixz="2.4395E-19"
+        iyy="0.0015012"
+        iyz="-3.5237E-19"
+        izz="0.0024014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/elbow2twist2.2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/elbow2twist2.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow2twist2.2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 60"
+      rpy="0 -3.142 3.142" />
+    <parent
+      link="elbow2twist1_link" />
+    <child
+      link="elbow2twist2.2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="shoulder2elbow2.2_link">
+    <inertial>
+      <origin
+        xyz="0.0010394 0 0.0075"
+        rpy="0 0 0" />
+      <mass
+        value="0.53191" />
+      <inertia
+        ixx="6.1001E-05"
+        ixy="-2.2446E-19"
+        ixz="8.6397E-20"
+        iyy="0.0011553"
+        iyz="-9.4868E-20"
+        izz="0.0011967" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/shoulder2elbow2.2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.72157 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://atomgrip2/meshes/shoulder2elbow2.2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder2elbow2.2_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -90"
+      rpy="3.14159265358979 3.141 3.142" />
+    <parent
+      link="shoulder2elbow1_link" />
+    <child
+      link="shoulder2elbow2.2_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5"
+      upper="1.5"
+      effort="10"
+      velocity="1" />
+  </joint>
+</robot>

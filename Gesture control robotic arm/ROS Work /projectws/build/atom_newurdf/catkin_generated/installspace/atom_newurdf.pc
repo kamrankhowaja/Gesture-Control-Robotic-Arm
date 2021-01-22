@@ -1,0 +1,8 @@
+prefix=/home/kamran/projectws/install
+
+Name: atom_newurdf
+Description: Description of atom_newurdf
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
